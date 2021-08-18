@@ -1,6 +1,6 @@
 ---
 title: "HW 00 - Pet names"
-subtitle: "Due: 1 October, 16:00 UK time"
+subtitle: "Due: 30 September, 16:00 UK time"
 output: 
   tufte::tufte_html:
     css: ../hw.css
@@ -31,15 +31,15 @@ The goal of this assignment is to introduce you to R, RStudio, Git, and GitHub, 
 
 ## Prerequisites
 
-This assignment assumes that you have watched the following videos and completed the lab exercises.
-If you haven't yet done so, please pause and complete the following before continuing.
+This assignment assumes that you have followed the *first time setup instructions* and watched the following videos.
+If you haven't yet done so, please go and complete the following before continuing.
 
--   Watch the following videos listed [here](https://www.introds.org/post/01-week/#videos "Link to Week 1 videos"):
+-   [first time setup instructions](https://idsed.digital/troubleshoot/)
+
+-   Watch the following videos listed [here](https://idsed.digital/week01/#videos "Link to Week 1 videos"):
 
     -   Meet the toolkit: programming
     -   Meet the toolkit: version control and collaboration
-
--   [Lab 00: Hello IDS!](https://ids-s1-20.github.io/labs/lab-00/lab-00-hello-ids.html "Lab 00: Hello IDS!")
 
 ## Terminology
 
@@ -47,17 +47,19 @@ We've already thrown around a few new terms, so let's define them before we proc
 
 -   **R:** Name of the programming language we will be using throughout the course.
 
--   **RStudio:** An integrated development environment for R. In other words, a convenient interface for writing and running R code.
+-   **RStudio:** An integrated development environment for R.
+    In other words, a convenient interface for writing and running R code.
 
 -   **Git:** A version control system.
 
 -   **GitHub:** A web platform for hosting version controlled files and facilitating collaboration among users.
 
--   **Repository:** A Git repository contains all of your project's files and stores each file's revision history. It's common to refer to a repository as a repo.
+-   **Repository:** A Git repository contains all of your project's files and stores each file's revision history.
+    It's common to refer to a repository as a repo.
 
     -   In this course, each assignment you work on will be contained in a Git repo.
     -   For individual assignments, only you will have access to the repo. For team assignments, all team members will have access to a single repo where they work collaboratively.
-    -   All repos associated with this course are housed in a GitHub organization: [`ids-s1-20`](https://github.com/ids-s1-20). The organization is set up such that students can only see repos they have access to, but the course staff can see all of them.
+    -   All repos associated with this course are housed in a GitHub organization: [`ids-s1-21`](https://github.com/ids-s1-21). The organization is set up such that students can only see repos they have access to, but the course staff can see all of them.
 
 ## Starting slow
 
@@ -73,7 +75,7 @@ Before you can get started with the analysis, you need to make sure you:
 
 -   are a member of the course GitHub organization
 
-    -   You can check this by going to [`ids-s1-20`](https://github.com/ids-s1-20) and confirming that you can see a repository called `hw-00-pet-names-YOUR_GITHUB_USERNAME` where `YOUR_GITHUB_USERNAME` is, well, your github username.
+    -   You can check this by going to [`ids-s1-20`](https://github.com/ids-s1-21) and confirming that you can see a repository called `hw-00-pet-names-YOUR_GITHUB_USERNAME` where `YOUR_GITHUB_USERNAME` is, well, your github username.
 
         ```{r rstudio-cloud, fig.margin = TRUE, echo = FALSE, eval = TRUE}
         knitr::include_graphics("img/rstudio-cloud-space.png")
@@ -81,21 +83,17 @@ Before you can get started with the analysis, you need to make sure you:
 
 -   are a member of the course RStudio Cloud space
 
-    -   You can check this by going to [rstudio.cloud](https://rstudio.cloud/ "RStudio Cloud") and confirming that you can see Introduction to Data Science listed as one of your workspaces on the left menu.
+    -   You can check this by going to [rstudio.cloud](https://rstudio.cloud/ "RStudio Cloud") and confirming that you can see "IDS 2021" listed as one of your workspaces on the left menu.
 
 If you failed to confirm any of these, it means you have not yet completed the prerequisites for this assignment.
 Please go back to [Prerequisites] and complete them before continuing the assignment.
 
-If you believe you've completed all of the prerequisites and you are still having difficulty, review troubleshooting advice [here](https://www.introds.org/troubleshoot/github-org.html).
-
-**!!!IMPORTANT!!!** Your repository is not the one called `homework`, that's where I write the homework instructions (like this document!).
-You should look for a repo with your username, and if it doesn't exist, go back and do the prerequisite steps.
-If you have done them, and it still doesn't exist, then let me know and I'll help you get unstuck.
+If you believe you've completed all of the prerequisites and you are still having difficulty, review troubleshooting advice [here](https://idsed.digital/troubleshoot/).
 
 ## Workflow
 
 ```{marginfigure}
-**IMPORTANT:** If there is no GitHub repo created for you for this assignment, it means I didn't have your GitHub username as of when I assigned the homework. Please let me know your GitHub username asap, and I can create your repo.
+**IMPORTANT:** If there is no GitHub repo created for you for this assignment, it means I didn't have your GitHub username as of when I assigned the homework. Please let me know your GitHub username ASAP, and I can create your repo.
 ```
 
 For each assignment in this course you will start with a GitHub repo that I created for you and that contains the starter documents you will build upon when working on your assignment.
@@ -104,40 +102,7 @@ This action is called **cloning**.
 
 Then you will work in RStudio on the data analysis, making **commits** along the way (snapshots of your changes) and finally **push** all your work back to GitHub.
 
-The next few steps will walk you through the process of getting information of the repo to be cloned, cloning your repo in a new RStudio Cloud project, and getting started with the analysis.
-
-### Step 1. Get URL of repo to be cloned
-
-```{r clone-repo-link, fig.margin = TRUE, echo = FALSE, eval = TRUE}
-knitr::include_graphics("img/clone-repo-link.png")
-```
-
-On GitHub, click on the green **Code** button, select **HTTPS** (this might already be selected by default, and if it is, you'll see the text *Use Git or checkout with SVN using the web URL* jas in the image on the right).
-Click on the clipboard icon 📋 to copy the repo URL.
-
-### Step 2. Go to RStudio Cloud
-
-Go to [rstudio.cloud](https://rstudio.cloud/ "RStudio Cloud") and then **navigate to the course workspace** via the left sidebar.
-It's very important that you do this for two reasons:
-
--   It's only when you're in the course workspace that you'll be able to benefit from R packages I've pre-installed for you so that your project can be configured correctly.
--   It's only when you're in the course workspace that your usage of RStudio Cloud won't count towards their free usage limits. RStudio offers free usage of their Cloud service, but they cap it at 15 hours. The university has already paid for an RStudio Cloud account for you, and you want to make sure you're taking advantage of that, and not using up your personal free hours.
-
-```{r course-workspace, fig.margin = TRUE, echo = FALSE, eval = TRUE}
-knitr::include_graphics("img/course-workspace.png")
-```
-
-Before you proceed, confirm that you are in the course workspace by checking out what's on your top bar in RStudio Cloud.
-
-### Step 3. Clone the repo
-
-In RStudio, click on the **down arrow** next to New Project and then choose **New Project from Git Repository**.
-
-In the pop-up window, **paste the URL** you copied from GitHub, make sure the box for **Add packages from the base project** is checked (it should be, by default) and then click **OK**.
-
-```{r new-project-from-git, echo = FALSE, eval = TRUE, fig.align = "left"}
-knitr::include_graphics("img/new-project-from-git.png")
-```
+The [Opening a Project](https://idsed.digital/troubleshoot/setup/openingaproject/) page walks you through the process of getting information of the repo to be cloned, cloning your repo in a new RStudio Cloud project, and getting started with the analysis.
 
 ## Hello RStudio!
 
@@ -194,22 +159,19 @@ Or more specifically, to your repo on GitHub.
 Why?
 So that others can see your changes.
 And by others, we mean the course teaching team (your repos in this course are private to you and us, only).
-In order to push your changes to GitHub, click on **Push**.
+In order to push your changes to GitHub, you will need to click on **Push**.
 
 ```{r ready-to-push, fig.margin = TRUE, echo = FALSE, eval = TRUE}
 knitr::include_graphics("img/ready-to-push.png")
 ```
 
-This will prompt a dialogue box where you first need to enter your user name, and then your password.
-This might feel cumbersome.
-Bear with me... I *will* teach you how to save your password so you don't have to enter it every time.
-But for this one assignment you'll have to manually enter each time you push in order to gain some experience with it.
+However, GitHub recently made some changes for extra security.
+As such, you will first need to follow the [Push and Pull Changes](https://idsed.digital/troubleshoot/setup/openingaproject/#push-and-pull-changes) instructions on the [Opening a Project](https://idsed.digital/troubleshoot/setup/openingaproject/) page.
+The good news is you will only need to do this once per RStudio Cloud project - rather than constantly typing in your username and password every time you want to push a change to GitHub.
 
 ### Thought exercise
 
 Which of the above steps (updating the YAML, committing, and pushing) needs to talk to GitHub?[^1]
-
-[^1]: Only pushing requires talking to GitHub, this is why you're asked for your password at that point.
 
 ## Packages
 
@@ -217,7 +179,7 @@ R is an open-source language, and developers contribute functionality to R via p
 In this assignment we will use the following packages:
 
 -   `tidyverse`: a collection of packages for doing data analysis in a "tidy" way
--   `openintro`: a package that contains the datasets from OpenIntro books
+-   `openintro`: a package that contains the datasets from OpenIntro books - part of the reading for this course.
 
 We use the `library()` function to load packages.
 In your R Markdown document you should see an R chunk labelled `load-packages` which has the necessary code for loading both packages.
@@ -372,8 +334,18 @@ ggplot(comb_name_props, aes(x = cat_prop, y = dog_prop)) +
 1.  What names are more common for cats than dogs? The ones above the line or the ones below the line?
 2.  Is the relationship between the two variables (proportion of cats with a given name and proportion of dogs with a given name) positive or negative? What does this mean in context of the data?
 
-✏️ *Now is a good time to commit and push your changes to GitHub with an appropriate commit message. Commit and push all changed files so that your Git pane is cleared up afterwards. Make sure that your last push to the repo comes before the deadline, 1 October, 16:00 UK time. You can confirm that what you committed and pushed are indeed in your repo that we will see by visiting your repo on GitHub.*
+```{marginfigure}
+__IMPORTANT: How do we mark assignments?__
+
+Firstly, this week, we will not be marking your HW or Lab as they are just a practice.
+
+However, for the rest of the course, your teaching team will mark your work using your __knitted file__ (ending in .html or .md) and not your R Markdown (.Rmd) file that you use to create and run your code. This is because your knitted file is a completely _reproducible_ document where we can see your code and its output without having to run any code ourselves. It is important you knit your work while working on your assessments as we will only mark what is in the knitted file and not what is in the .Rmd file.
+```
+
+✏️ *Now is a good time to do one last knit, then commit and push your changes to GitHub with an appropriate commit message. Commit and push all changed files so that your Git pane is cleared up afterwards. Make sure that your last push to the repo comes before the deadline, 30 September, 16:00 UK time. You can confirm that what you committed and pushed are indeed in your repo that we will see by visiting your repo on GitHub. Its also a good idea to check all your work is in the knitted file.*
 
 ## Getting help
 
 If you have any questions about the assignment, please post them on Piazza!
+
+[^1]: Only pushing requires talking to GitHub, this is why you're asked for your username and password for the first time at that point.
