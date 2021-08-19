@@ -177,7 +177,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>…clean up the <code>Country of Origin/Parent Company</code> variable with <code>str_squish()</code>.</p>
 <p>…add a new column to the data frame for <code>year</code>. We will want this information when we ultimately have data from all years, so this is a good time to keep track of it. Our function doesn’t take a year argument, but the year is embedded in the URL, so we can extract it out of there, and add it as a new column. Use the <code>str_sub()</code> function to extract the last 4 characters from the URL. You will probably want to look at the help for this function to figure out how to specify “last 4 characters”.</p></li>
 <li><p>Construct a vector called <code>urls</code> that contains the URLs for each webpage that contains information on foreign-connected PAC contributions for a given year.</p>
-<p>Map the <code>scrape_pac()</code> function over <code>urls</code> in a way that will result in a data frame called <code>pac_all</code>. Then write the data frame to a csv file called <code>pac-all.csv</code> in the <code>data</code> folder.</p></li>
+<p>Map the <code>scrape_pac()</code> function over <code>urls</code> in a way that will result in a data frame called <code>pac_all</code>. Then write the data frame to a csv file called <code>pac_all.csv</code> in the <code>data</code> folder.</p></li>
 </ol>
 <p>🧶✅⬆️ <em>If you haven’t yet done so, now is definitely a good time to knit, commit, and push your changes to GitHub with an appropriate commit message (e.g. “Data scraping complete”). Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.</em></p>
 </div>
@@ -191,7 +191,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The following exercises walk you through how to make these fixes to the data.</p>
 <p><label for="tufte-mn-2" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-2" class="margin-toggle"><span class="marginnote"><span style="display: block;">If you can’t get the webscraping section above working, a <code>pac_all.csv</code> already exists in your repository for you to work on.</span></span></p>
 <ol style="list-style-type: decimal">
-<li>In your R Markdown file, load <code>pac-all.csv</code> and report its number of observations and variables as a full sentence.</li>
+<li>In your R Markdown file, load <code>pac_all.csv</code> and report its number of observations and variables as a full sentence.</li>
 </ol>
 <p><label for="tufte-mn-3" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-3" class="margin-toggle"><span class="marginnote"><span style="display: block;">Country and parent company names are separated by \, with some entries having two \ (we want to split at the first \). This can be accomplished by setting the <code>extra</code> argument in <code>separate</code> to <code>“merge”</code> so that the cell is split into only 2 segments, e.g. <code>“Denmark/Novo Nordisk A/S”</code> into <code>“Denmark”</code> and <code>“Novo Nordisk A/S”</code>.</span></span></p>
 <ol style="list-style-type: decimal">
