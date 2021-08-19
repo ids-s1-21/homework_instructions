@@ -26,7 +26,7 @@ In this assignment you'll get to put your newly acquired data visualisation and 
 
 ## Prerequisites
 
--   This assignment assumes that you've worked through all materials for [week 1](https://idsed.digital/week01/), [week 2](https://idsed.digital/week01/), and [week 3](https://idsed.digital/week01/).
+-   This assignment assumes that you've worked through all materials for [week 1](https://idsed.digital/week01/), [week 2](https://idsed.digital/week02/), and [week 3](https://idsed.digital/week03/).
     Make sure you're familiar with this content.
 
 -   This assignment uses datasets from the following interactive R tutorials that were assigned during these weeks.
@@ -89,7 +89,7 @@ Or more specifically, to your repo on GitHub.
 Why?
 So that others can see your changes.
 And by others, we mean the course teaching team (your repos in this course are private to you and us, only).
-In order to push your changes to GitHub, first follow the instructions on the [Push and Pull Changes](https://idsed.digital/troubleshoot/setup/openingaproject/#push-and-pull-changes) instructions on the [Opening a Project](https://idsed.digital/troubleshoot/setup/openingaproject/) page, then click on **Push**.
+In order to push your changes to GitHub, first follow the [Push and Pull Changes](https://idsed.digital/troubleshoot/setup/openingaproject/#push-and-pull-changes) instructions on the [Opening a Project](https://idsed.digital/troubleshoot/setup/openingaproject/) page, then click on **Push**.
 
 ## Packages
 
@@ -182,7 +182,7 @@ Don't forget to label your R chunk as well (where it says `label-me-1`). Your la
 knitr::include_graphics("img/plot-to-recreate.png")
 ```
 
-1.  Create another data visualisation based on these data and interpret it. You can choose any variables and any type of visualisation you like, but it must have at least three variables, e.g. a scatterplot of x vs. y isn't enough, but if points are coloured by z, that's fine.
+1.  Create another data visualisation based on this data and interpret it. You can choose any variables and any type of visualisation you like, but it must have at least three variables, e.g. a scatterplot of x vs. y isn't enough, but if points are coloured by z, that's fine.
 
 ```{marginfigure}
 __IMPORTANT: How do we mark assignments?__
@@ -190,7 +190,7 @@ __IMPORTANT: How do we mark assignments?__
 Your teaching team will mark your work using your __knitted file__ (ending in .html or .md) and not your R Markdown (.Rmd) file that you use to create and run your code. This is because your knitted file is a completely _reproducible_ document where we can see your code and its output without having to run any code ourselves. It is important you knit your work while working on your assessments as we will only mark what is in the knitted file and not what is in the .Rmd file.
 ```
 
-✏️ *Now is a good time to commit and push your changes to GitHub with an appropriate commit message. Commit and push all changed files so that your Git pane is cleared up afterwards. Make sure that your last push to the repo comes before the deadline, **15 October, 16:00 UK time**. You can confirm that what you committed and pushed are indeed in your repo that we will see by visiting your repo on GitHub. Make sure your Rmd and md files are there and that your md file contains all of your plots as well.*
+✏️ *Now is a good time to commit and push your changes to GitHub with an appropriate commit message. Commit and push all changed files so that your Git pane is cleared up afterwards. Make sure that your last push to the repo comes before the deadline, **15 October, 16:00 UK time**. You can confirm that what you committed and pushed are indeed in your repo that we will see by visiting your repo on GitHub. Make sure your Rmd and md files are there and that your md file contains all of your plots!*
 
 ## Getting help
 
