@@ -216,11 +216,11 @@ You can find out more about the dataset by inspecting its documentation (which c
 
 1.  According to the data dictionary, how many pets are included in this dataset?
 
-✏️ *Write your answer in your R Markdown document under Exercise 1, knit the document, commit your changes with a commit message that says "Completed Exercise 1", and push.*
+✏️️🧶 ✅ ⬆️ *Write your answer in your R Markdown document under Exercise 1, knit the document, commit your changes with a commit message that says "Completed Exercise 1", and push.*
 
 1.  Again, according to the data dictionary, how many variables do we have for each pet?
 
-✏️ *Write your answer in your R Markdown document under Exercise 2, knit the document, commit your changes with a commit message that says "Completed Exercise 2", and push.*
+✏️️🧶 ✅ ⬆️ *Write your answer in your R Markdown document under Exercise 2, knit the document, commit your changes with a commit message that says "Completed Exercise 2", and push.*
 
 1.  What are the three most common pet names in Seattle? To do this you will need to count the frequencies of each pet name and display the results in descending order of frequency so that you can easily see the top three most popular names. The following code does exactly that.
 
@@ -233,7 +233,7 @@ seattlepets %>%
   count(animal_name, sort = TRUE)
 ```
 
-✏️ *Write your answer in your R Markdown document under Exercise 3. In this exercise you will not only provide a written answer but also include some code and output. You should insert the code in the code chunk provided for you, knit the document to see the output, and then write your narrative for the answer based on the output of this function, and knit again to see your narrative, code, and output in the resulting document. Then, commit your changes with a commit message that says "Completed Exercise 3", and push.*
+✏️️🧶 ✅ ⬆️ *Write your answer in your R Markdown document under Exercise 3. In this exercise you will not only provide a written answer but also include some code and output. You should insert the code in the code chunk provided for you, knit the document to see the output, and then write your narrative for the answer based on the output of this function, and knit again to see your narrative, code, and output in the resulting document. Then, commit your changes with a commit message that says "Completed Exercise 3", and push.*
 
 Let's also look to see what the most common pet names are for various species.
 For this we need to first `group_by()` the `species`, and then do the same counting we did before.
@@ -277,7 +277,7 @@ seattlepets %>%
 
 1.  Based on the previous output we can easily identify the most common cat and dog names in Seattle, but the output is sorted by `n` (the frequencies) as opposed to being organized by the `species`. Build on the pipeline to arrange the results so that they're arranged by `species` first, and then `n`. This means you will need to add one more step to the pipeline, and you have two options: `arrange(species, n)` or `arrange(n, species)`. You should try both and decide which one organizes the output by species and then ranks the names in order of frequency for each species.
 
-✏️ *Write your answer in your R Markdown document under Exercise 4. In this exercise you're asked to complete the code provided for you. You should insert the code in the code chunk provided for you, knit the document to see the output, and then write your narrative for the answer based on the output of this function, and knit again to see your narrative, code, and output in the resulting document. Then, commit your changes with a commit message that says "Completed Exercise 4", and push.*
+✏️️🧶 ✅ ⬆️ *Write your answer in your R Markdown document under Exercise 4. In this exercise you're asked to complete the code provided for you. You should insert the code in the code chunk provided for you, knit the document to see the output, and then write your narrative for the answer based on the output of this function, and knit again to see your narrative, code, and output in the resulting document. Then, commit your changes with a commit message that says "Completed Exercise 4", and push.*
 
 The following visualization plots the proportion of dogs with a given name versus the proportion of cats with the same name.
 The 20 most common cat and dog names are displayed.
@@ -342,7 +342,7 @@ Firstly, this week, we will not be marking your HW or Lab as they are just a pra
 However, for the rest of the course, your teaching team will mark your work using your __knitted file__ (ending in .html or .md) and not your R Markdown (.Rmd) file that you use to create and run your code. This is because your knitted file is a completely _reproducible_ document where we can see your code and its output without having to run any code ourselves. It is important you knit your work while working on your assessments as we will only mark what is in the knitted file and not what is in the .Rmd file.
 ```
 
-✏️ *Now is a good time to do one last knit, then commit and push your changes to GitHub with an appropriate commit message. Commit and push all changed files so that your Git pane is cleared up afterwards. Make sure that your last push to the repo comes before the deadline, 30 September, 16:00 UK time. You can confirm that what you committed and pushed are indeed in your repo that we will see by visiting your repo on GitHub. Its also a good idea to check all your work is in the knitted file.*
+✏️️🧶 ✅ ⬆️ *After writing your answer in your R Markdown document under the appropriate exercise, make sure to knit, commit, and push your changes to GitHub with an appropriate commit message. Make sure you have committed and pushed all changed files so that your Git pane is cleared up afterwards. Your last push to the repo needs to come before the deadline, **30 September, 16:00 UK time**. You can confirm that what you committed and pushed are indeed in your repo that we will see by visiting your repo on GitHub. Make sure your Rmd and md files are there and that your md file contains all of your code and plots!*
 
 ## Getting help
 
