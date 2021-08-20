@@ -1,6 +1,6 @@
 ---
 title: "HW 5 - Model and review"
-subtitle: "Due: 10 December, 16:00 UK time"
+subtitle: "Due: 9 December, 16:00 UK time"
 output: 
   tufte::tufte_html:
     css: ../hw.css
@@ -54,105 +54,73 @@ The responses to the question on the GSS about this statement are in the `advfro
 It's important that you don't recode the NAs, just the remaining levels.
 ```
 
-1.  Re-level the `advfront` variable such that it has two levels: `Strongly agree` and "`Agree"` combined into a new level called `agree` and the remaining levels (except `NA`s) combined into "`Not agree"`. Then, re-order the levels in the following order: `"Agree"` and `"Not agree"`. Finally, `count()` how many times each new level appears in the `advfront` variable.
+1.  Re-level the `advfront` variable such that it has two levels: `"Strongly agree"` and `"Agree"` combined into a new level called `"Agree"` and the remaining levels (except `NA`s) combined into `"Not agree"`. Then, re-order the levels in the following order: `"Agree"` and `"Not agree"`. Finally, `count()` how many times each new level appears in the `advfront` variable.
 
 ```{marginfigure}
 You can do this in various ways. One option is to use the `str_detect()` function to detect the existence of words like liberal or conservative. Note that these sometimes show up with lowercase first letters and sometimes with upper case first letters. To detect either in the `str_detect()` function, you can use "[Ll]iberal" and "[Cc]onservative". But feel free to solve the problem however you like, this is just one option!
 ```
 
-2.  Combine the levels of the `polviews` variable such that levels that have the word "liberal" in them are lumped into a level called `"Liberal"` and those that have the word conservative in them are lumped into a level called `"Conservative"`. Then, re-order the levels in the following order: `"Conservative"` , `"Moderate"`, and `"Liberal"`. Finally, `count()` how many times each new level appears in the `polviews` variable.
+2.  Combine the levels of the `polviews` variable such that levels that have the word "liberal" in them are lumped into a level called `"Liberal"` and those that have the word "conservative" in them are lumped into a level called `"Conservative"`.
+    Then, re-order the levels in the following order: `"Conservative"` , `"Moderate"`, and `"Liberal"`.
+    Finally, `count()` how many times each new level appears in the `polviews` variable.
 
-```{=html}
-<!-- -->
-```
-3.  Create a new data frame called `gss16_advfront` that includes the variables `advfront`, `educ`, `polviews`, and `wrkstat`. Then, use the `drop_na()` function to remove rows that contain `NA`s from this new data frame. Sample code is provided below.
+3.  Create a new data frame called `gss16_advfront` that includes the variables `advfront`, `educ`, `polviews`, and `wrkstat`.
+    Then, use the `drop_na()` function to remove rows that contain `NA`s from this new data frame.
 
-```{r eval=FALSE}
-gss16_advfront <- gss16 %>%
-  select(___, ___, ___, ___) %>%
-  drop_na()
+```{marginfigure}
+Use the specific names given to make it easier to follow the rest of the instructions.
 ```
 
-4.  Split the data into training (75%) and testing (25%) data sets. Make sure to set a seed before you do the `initial_split()`. Call the training data `gss16_train` and the testing data `gss16_test`. Sample code is provided below. Use these specific names to make it easier to follow the rest of the instructions.
+4.  Split the data into training (75%) and testing (25%) data sets. Make sure to set a seed before you do the `initial_split()`. Call the training data `gss16_train` and the testing data `gss16_test`.
 
-```{r eval=FALSE}
-set.seed(___)
-gss16_split <- initial_split(gss16_advfront)
-gss16_train <- training(gss16_split)
-gss16_test  <- testing(gss16_split)
+```{marginfigure}
+We'll create one more recipe later, that's why we're naming this recipe `_1`.
 ```
 
-5.  Create a recipe with the following steps for predicting `advfront` from `polviews`, `wrkstat`, and `educ`. Name this recipe `gss16_rec_1`. (We'll create one more recipe later, that's why we're naming this recipe `_1`.) Sample code is provided below.
+5.  Create a recipe with the following steps for predicting `advfront` from `polviews`, `wrkstat`, and `educ`.
+    Name this recipe `gss16_rec_1`.
 
     -   `step_other()` to pool values that occur less than 10% of the time (`threshold = 0.10`) in the `wrkstat` variable into `"Other"`.
 
     -   `step_dummy()` to create dummy variables for `all_nominal()` variables that are predictors, i.e. `all_predictors()`
 
-```{r eval=FALSE}
-gss16_rec_1 <- recipe(___ ~ ___, data = ___) %>%
-  step_other(wrkstat, threshold = ___, other = "Other") %>%
-  step_dummy(all_nominal(), -all_outcomes())
-```
+6.  Specify a logistic regression model using `"glm"` as the engine.
+    Name this specification `gss16_spec`.
 
-6.  Specify a logistic regression model using `"glm"` as the engine. Name this specification `gss16_spec`. Sample code is provided below.
+7.  Build a workflow that uses the recipe you defined (`gss16_rec`) and the model you specified (`gss16_spec`).
+    Name this workflow `gss16_wflow_1`.
 
-```{r eval=FALSE}
-gss16_spec <- ___() %>%
-  set_engine("___")
-```
-
-7.  Build a workflow that uses the recipe you defined (`gss16_rec`) and the model you specified (`gss16_spec`). Name this workflow `gss16_wflow_1`. Sample code is provided below.
-
-```{r eval=FALSE}
-gss16_wflow_1 <- workflow() %>%
-  add_model(___) %>%
-  add_recipe(___)
-```
-
-8.  Perform 5-fold cross validation. specifically,
+8.  Perform 5-fold cross validation.
+    Specifically,
 
     -   split the training data into 5 folds (don't forget to set a seed first!),
 
-    -   apply the workflow you defined earlier to the folds with `fit_resamples()`, and
+    -   apply the workflow you defined earlier to the folds with `fit_resamples()`,
 
-    -   `collect_metrics()` and comment on the consistency of metrics across folds (you can get the area under the ROC curve and the accuracy for each fold by setting `summarize = FALSE` in `collect_metrics()`)
+    -   `collect_metrics()` and comment on the consistency of metrics across folds (you can get the area under the ROC curve and the accuracy for each fold by setting `summarize = FALSE` in `collect_metrics()`),
 
-    -   report the average area under the ROC curve and the accuracy for all cross validation folds `collect_metrics()`
+    -   and report the average area under the ROC curve and the accuracy for all cross validation folds `collect_metrics()`.
 
-```{r eval=FALSE}
-set.seed(___)
-gss16_folds <- vfold_cv(___, v = ___)
-
-gss16_fit_rs_1 <- gss16_wflow_1 %>%
-  fit_resamples(___)
-
-collect_metrics(___, summarize = FALSE)
-collect_metrics(___)
-```
-
-9.  Now, try a different, simpler model: predict `advfront` from only `polviews` and `educ`. Specifically,
+9.  Now, try a different, simpler model: predict `advfront` from only `polviews` and `educ`.
+    Specifically,
 
     -   update the recipe to reflect this simpler model specification (and name it `gss16_rec_2`),
 
     -   redefine the workflow with the new recipe (and name this new workflow `gss16_wflow_2`),
 
-    -   perform cross validation, and
+    -   perform cross validation,
 
-    -   report the average area under the ROC curve and the accuracy for all cross validation folds `collect_metrics()`.
+    -   and report the average area under the ROC curve and the accuracy for all cross validation folds `collect_metrics()`.
 
-```{=html}
 <!-- -->
-```
+
 10. Comment on which model performs better (one including `wrkstat`, model 1, or the one excluding `wrkstat`, model 2) on the training data based on area under the ROC curve.
-11. Fit both models to the testing data, plot the ROC curves for the predictions for both models, and calculate the areas under the ROC curve. Does your answer to the previous exercise hold for the testing data as well? Explain your reasoning. Note: If you haven't yet done so, you'll need to first train your workflows on the training data with the following, and then use these fit objects to calculate predictions for the test data.
 
-```{r eval=FALSE}
-gss16_fit_1 <- gss16_wflow_1 %>%
-  fit(gss16_train)
-
-gss16_fit_2 <- gss16_wflow_2 %>%
-  fit(gss16_train)
+```{marginfigure}
+__Note:__ If you haven't yet done so, you'll need to first train your workflows on the training data, and then use these fit objects to calculate predictions for the test data.
 ```
+
+11. Use the models to predict the test data, plot the ROC curves for the predictions for both models, and calculate the areas under the ROC curve. Does your answer to the previous exercise hold for the testing data as well? Explain your reasoning.
 
 ## Harassment at work
 
@@ -163,19 +131,25 @@ The question is phrased as the following.
 
 Answers to this question are stored in the `harass5` variable in our dataset.
 
-12. Create a subset of the data that only contains `Yes` and `No` answers for the harassment question. How many responses chose each of these answers?
+12. Create a subset of the data that only contains `Yes` and `No` answers for the harassment question.
+    How many responses chose each of these answers?
+
 13. Describe how bootstrapping can be used to estimate the proportion of Americans who have been harassed by their superiors or co-workers at their job.
-14. Calculate a 95% bootstrap confidence interval for the proportion of Americans who have been harassed by their superiors or co-workers at their job. Interpret this interval in context of the data.
-15. Would you expect a 90% confidence interval to be wider or narrower than the interval you calculated above? Explain your reasoning.
+
+14. Calculate a 95% bootstrap confidence interval for the proportion of Americans who have been harassed by their superiors or co-workers at their job.
+    Interpret this interval in context of the data.
+
+15. Would you expect a 90% confidence interval to be wider or narrower than the interval you calculated above?
+    Explain your reasoning.
 
 # Part 2 - Project peer review
 
 In this part you're asked to review three project presentations we didn't get to watch during the presentations on Friday.
 To complete this part:
 
--   Find the list of presentations [here](https://github.com/ids-s1-20/teams/blob/main/ids20-presentations-for-peer-review.csv)
+-   Find the list of presentations [here](https://example.com/)
 -   Select three projects (other than your own, obviously!) from your own tutorial group (tutorial 1, 2, or 3)
--   Submit reviews for the projects on the peer review form [here](https://forms.office.com/Pages/ResponsePage.aspx?id=sAafLmkWiUWHiRCgaTTcYRiRHjHRDWhOuLE_6JyNA0dUNDI4SkowQ1ZWNDFRRUJBVzcxNTZJNk1MQS4u) (just like you did during the session on Friday)
+-   Submit reviews for the projects on the peer review form [here](https://example.com/) (just like you did during the session on Friday)
 -   And finally complete the following exercise
 
 16. Write a paragraph that very briefly describes each project (1-2 sentences each), highlights what you liked in each project and what you think can be improved, and finally comment on how you could improve your own project (analysis, presentation, or any other aspect) based on strengths of these three projects, if you had extra time to do so.
@@ -184,3 +158,4 @@ To complete this part:
     General Social Surveys, 1972-2016 [machine-readable data file] /Principal Investigator, Tom W. Smith; Co-Principal Investigator, Peter V. Marsden; Co-Principal Investigator, Michael Hout; Sponsored by National Science Foundation.
     -NORC ed.- Chicago: NORC at the University of Chicago [producer and distributor].
     Data accessed from the GSS Data Explorer website at gssdataexplorer.norc.org.
+
