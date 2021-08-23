@@ -112,7 +112,7 @@ __Hints:__ The `$` character is a special character so it will need to be escape
     In this case we need to remove all occurrences of `,`, which we can do by using `str_remove_all()` instead of `str_remove()`.
 ```
 
-1.  Remove the character strings including `$` and `,` signs in the `total`, `dems`,and `repubs` columns and convert these columns to numeric. End your code chunk by printing out the top 10 rows of your data frame (if you just type the data frame name it should automatically do this for you).
+1.  Remove the character strings including `$` and `,` signs in the `total`, `dems`, and `repubs` columns and convert these columns to numeric. End your code chunk by printing out the top 10 rows of your data frame (if you just type the data frame name it should automatically do this for you).
 
 🧶 ✅ ⬆️ *Now is a good time to knit your document, and commit and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
