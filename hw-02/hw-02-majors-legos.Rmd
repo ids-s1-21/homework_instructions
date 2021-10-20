@@ -98,6 +98,10 @@ Let's think about some questions we might want to answer with these data:
 
 2.  Recreate the following visualisation. Note: The binwidth used is \$5,000. Pay special attention to axis text and labels.
 
+```{marginfigure}
+**Hint:** Wondering how to restrict to full-time, year-round workers?  Have a look at the data dictionary by typing `?college_recent_grads` into the console.  It's probably easier than you think!
+```
+
 ```{r echo=FALSE}
 knitr::include_graphics("img/med-earnings-stem-5000-1.png")
 ```
