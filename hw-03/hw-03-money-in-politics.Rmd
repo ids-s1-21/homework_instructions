@@ -61,7 +61,7 @@ Then iterate it over pages for all years.
 __Hint:__ You can test your function by defining the URLs for 2020, 2018, and 1998 contributions and using these URLs as inputs. Use this to check the function does what you expected it to do.
 ```
 
-1.  Complete writing the function called `scrape_pac()` below that scrapes information from the Open Secrets webpage for foreign-contected PAC contributions in a given year.
+1.  Complete writing the function called `scrape_pac()` found in `./scripts/scrape.r` that scrapes information from the Open Secrets webpage for foreign-connected PAC contributions in a given year.
     This function should...
 
     ...have one input: the URL of the webpage and should return a data frame.
@@ -76,7 +76,7 @@ __Hint:__ You can test your function by defining the URLs for 2020, 2018, and 19
     Use the `str_sub()` function to extract the last 4 characters from the URL.
     You will probably want to look at the help for this function to figure out how to specify "last 4 characters".
 
-2.  Construct a vector called `urls` that contains the URLs for each webpage that contains information on foreign-connected PAC contributions for a given year.
+2.  Also in `./scripts/scrape.r`, construct a vector called `urls` that contains the URLs for each webpage that contains information on foreign-connected PAC contributions for a given year.
 
     Map the `scrape_pac()` function over `urls` in a way that will result in a data frame called `pac_all`.
     Then write the data frame to a csv file called `pac_all.csv` in the `data` folder.
@@ -137,7 +137,7 @@ knitr::include_graphics("img/uk-viz-1.png")
 ```{marginfigure}
 __IMPORTANT: How do we mark assignments?__
 
-Your teaching team will mark your work using your __knitted file__ (ending in .html or .md) and not your R Markdown (.Rmd) file that you use to create and run your code. This is because your knitted file is a completely _reproducible_ document where we can see your code and its output without having to run any code ourselves. It is important you knit your work while working on your assessments as we will only mark what is in the knitted file and not what is in the .Rmd file.
+Your teaching team will mark your work using your __knitted file__ (ending in .md) and not your R Markdown (.Rmd) file that you use to create and run your code. This is because your knitted file is a completely _reproducible_ document where we can see your code and its output without having to run any code ourselves. It is important you knit your work while working on your assessments as we will only mark what is in the knitted file and not what is in the .Rmd file.
 ```
 
 🧶 ✅ ⬆️ *Now is a good time to knit your document, commit, and then push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards. Make sure that your last push to the repo comes before the deadline, **11 November, 16:00 UK time**. You can confirm that what you committed and pushed are indeed in your repo that we will see by visiting your repo on GitHub. Make sure your Rmd and md files are there and that your md file contains all of your code and plots!*
