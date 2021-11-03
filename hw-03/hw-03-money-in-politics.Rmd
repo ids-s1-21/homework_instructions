@@ -58,7 +58,7 @@ Confirm it works on a few others.
 Then iterate it over pages for all years.
 
 ```{marginfigure}
-__Hints:__ You can test your function by defining the URLs for 2020, 2018, and 1998 contributions and using these URLs as inputs. Use this to check the function does what you expected it to do.
+__Hint:__ You can test your function by defining the URLs for 2020, 2018, and 1998 contributions and using these URLs as inputs. Use this to check the function does what you expected it to do.
 ```
 
 1.  Complete writing the function called `scrape_pac()` below that scrapes information from the Open Secrets webpage for foreign-contected PAC contributions in a given year.
@@ -95,20 +95,20 @@ We have two goals in data cleaning:
 The following exercises walk you through how to make these fixes to the data.
 
 ```{marginfigure}
-If you can't get the webscraping section above working, a `pac_all_backup.csv` already exists in your repository for you to work on.
+__Note:__ If you can't get the webscraping section above working, a `pac_all_backup.csv` already exists in your repository for you to work on.
 ```
 
 1.  In your R Markdown file, load `pac_all.csv` and report its number of observations and variables as a full sentence.
 
 ```{marginfigure}
-Country and parent company names are separated by `/`, with some entries having two `/` (we want to split at the first `/`).
+__Hint:__ Country and parent company names are separated by `/`, with some entries having two `/` (we want to split at the first `/`).
     This can be accomplished by setting the `extra` argument in `separate` to `"merge"` so that the cell is split into only 2 segments, e.g. `"Denmark/Novo Nordisk A/S"` into `"Denmark"` and `"Novo Nordisk A/S"`.
 ```
 
 1.  Use the `separate()` function to separate `country_parent` into `country` and `parent` columns. End your code chunk by printing out the top 10 rows of your data frame (if you just type the data frame name it should automatically do this for you).
 
 ```{marginfigure}
-__Hints:__ The `$` character is a special character so it will need to be escaped. Also some contribution amounts are in the millions (e.g. Anheuser-Busch contributed a total of \$1,510,897 in 2008).
+__Hint:__ The `$` character is a special character so it will need to be escaped. Also some contribution amounts are in the millions (e.g. Anheuser-Busch contributed a total of \$1,510,897 in 2008).
     In this case we need to remove all occurrences of `,`, which we can do by using `str_remove_all()` instead of `str_remove()`.
 ```
 
@@ -119,13 +119,13 @@ __Hints:__ The `$` character is a special character so it will need to be escape
 ## Data visualization and interpretation
 
 ```{marginfigure}
-__Hints:__ You can calculate the sum of total contributions from PACs for each year for each country by using a sequence of `group_by()` then `summarise()`. You can make a plot of total contributions (y-axis) by year (x-axis) where two lines identified by different colours represent each of Canada and Mexico (similar to the plot in the next question).
+__Hint:__ You can calculate the sum of total contributions from PACs for each year for each country by using a sequence of `group_by()` then `summarise()`. You can make a plot of total contributions (y-axis) by year (x-axis) where two lines identified by different colours represent each of Canada and Mexico (similar to the plot in the next question).
 ```
 
 1.  Create a line plot of total contributions from all foreign-connected PACs in the Canada and Mexico over the years. Once you have made the plot, write a brief interpretation of what the graph reveals.
 
 ```{marginfigure}
-__Hints:__ These are only UK contributions. You will need to make use of functions from the **scales** package for axis labels as well as from **ggplot2**.
+__Hint:__ These are only UK contributions. You will need to make use of functions from the **scales** package for axis labels as well as from **ggplot2**.
 ```
 
 1.  Recreate the following visualisation. Write a brief interpretation of what the graph reveals.
