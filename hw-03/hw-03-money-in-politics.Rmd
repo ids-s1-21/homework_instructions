@@ -134,6 +134,12 @@ __Hints:__ These are only UK contributions. You will need to make use of functio
 knitr::include_graphics("img/uk-viz-1.png")
 ```
 
+```{marginfigure}
+__IMPORTANT: How do we mark assignments?__
+
+Your teaching team will mark your work using your __knitted file__ (ending in .html or .md) and not your R Markdown (.Rmd) file that you use to create and run your code. This is because your knitted file is a completely _reproducible_ document where we can see your code and its output without having to run any code ourselves. It is important you knit your work while working on your assessments as we will only mark what is in the knitted file and not what is in the .Rmd file.
+```
+
 🧶 ✅ ⬆️ *Now is a good time to knit your document, commit, and then push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards. Make sure that your last push to the repo comes before the deadline, **11 November, 16:00 UK time**. You can confirm that what you committed and pushed are indeed in your repo that we will see by visiting your repo on GitHub. Make sure your Rmd and md files are there and that your md file contains all of your code and plots!*
 
 ## Getting help
