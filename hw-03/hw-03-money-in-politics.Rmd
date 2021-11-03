@@ -95,13 +95,13 @@ We have two goals in data cleaning:
 The following exercises walk you through how to make these fixes to the data.
 
 ```{marginfigure}
-If you can't get the webscraping section above working, a `pac_all.csv` already exists in your repository for you to work on.
+If you can't get the webscraping section above working, a `pac_all_backup.csv` already exists in your repository for you to work on.
 ```
 
 1.  In your R Markdown file, load `pac_all.csv` and report its number of observations and variables as a full sentence.
 
 ```{marginfigure}
-Country and parent company names are separated by \\\\, with some entries having two \\\\ (we want to split at the first \\\\).
+Country and parent company names are separated by `/`, with some entries having two `/` (we want to split at the first `/`).
     This can be accomplished by setting the `extra` argument in `separate` to `"merge"` so that the cell is split into only 2 segments, e.g. `"Denmark/Novo Nordisk A/S"` into `"Denmark"` and `"Novo Nordisk A/S"`.
 ```
 
