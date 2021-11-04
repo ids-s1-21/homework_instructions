@@ -58,7 +58,7 @@ Confirm it works on a few others.
 Then iterate it over pages for all years.
 
 ```{marginfigure}
-__Hint:__ You can test your function by defining the URLs for 2020, 2018, and 1998 contributions and using these URLs as inputs. Use this to check the function does what you expected it to do.
+__Hint:__ You can test your function by defining the URLs for 2020, 2018, and 2000 contributions and using these URLs as inputs. Use this to check the function does what you expected it to do.
 ```
 
 1.  Complete writing the function called `scrape_pac()` found in `./scripts/scrape.r` that scrapes information from the Open Secrets webpage for foreign-connected PAC contributions in a given year.
