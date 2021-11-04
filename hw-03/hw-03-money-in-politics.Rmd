@@ -76,6 +76,11 @@ __Hint:__ You can test your function by defining the URLs for 2020, 2018, and 19
     Use the `str_sub()` function to extract the last 4 characters from the URL.
     You will probably want to look at the help for this function to figure out how to specify "last 4 characters".
 
+```{marginfigure}
+__Note:__ There was an error in the template. Change the `root` object to the following:
+  `root <- "https://www.opensecrets.org/political-action-committees-pacs/foreign-connected-pacs/"`
+```
+
 2.  Also in `./scripts/scrape.r`, construct a vector called `urls` that contains the URLs for each webpage that contains information on foreign-connected PAC contributions for a given year.
 
     Map the `scrape_pac()` function over `urls` in a way that will result in a data frame called `pac_all`.
