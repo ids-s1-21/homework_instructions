@@ -19,7 +19,7 @@ knitr::opts_chunk$set(out.width = "100%", eval = TRUE)
 knitr::include_graphics("img/aroma-21973_640.jpg")
 ```
 
-In this three part assignment you get to practice what we learned this week, try something new, and get creative!
+In this three part assignment you get to be creative, try something new, and help your peers out!
 
 Click [here](https://idsed.digital/troubleshoot/setup/openingaproject/) for a workflow overview.
 
@@ -62,10 +62,10 @@ Then, load the package.
 Regardless of how you installed the package you can load it with the `library` function.
 
 Finally, do something with the package.
-It doesn't have to be that complicated.
+It doesn't have to be too complicated.
 The goal is for you to read and understand the package documentation to carry out a simple task.
 
-2.  Which package are you using? State the name of the package, whether it was on CRAN or GitHub, and include the code for loading it. Also include a one sentence description of what the package does. Then, do something with the package and provide a brief narrative including code and output. Also comment on difficulties you had, if any, figuring out how to use the package.
+2.  Do something with a package, including code and output. State the name of the package, whether it was on CRAN or GitHub, and include the code for loading it. Write a simple general description of what the package does, including difficulties you had (if any) figuring out how to use the package. Then, provide a brief explanation of what you have done using the package.
 
 ## Packages on CRAN
 
@@ -78,7 +78,6 @@ install.packages("PACKAGENAME")
 | Package                                                                                       | Description                                                                                                                                                                                                                                                                                                                              |
 |-----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [babynames](http://hadley.github.io/babynames/)                                               | US Baby Names 1880-2015                                                                                                                                                                                                                                                                                                                  |
-| [cowsay](https://cran.r-project.org/web/packages/cowsay/vignettes/cowsay_tutorial.html)       | Allows printing of character strings as messages/warnings/etc. with ASCII animals, including cats, cows, frogs, chickens, ghosts, and more                                                                                                                                                                                               |
 | [dragracer](https://cran.r-project.org/web/packages/dragracer/vignettes/dragracer-intro.html) | These are data sets for the hit TV show, RuPaul's Drag Race. Data right now include episode-level data, contestant-level data, and episode-contestant-level data                                                                                                                                                                         |
 | [datapasta](https://milesmcbain.github.io/datapasta/)                                         | RStudio addins and R functions that make copy-pasting vectors and tables to text painless                                                                                                                                                                                                                                                |
 | [DiagrammeR](https://rich-iannone.github.io/DiagrammeR/)                                      | Graph/Network Visualization                                                                                                                                                                                                                                                                                                              |
@@ -150,4 +149,16 @@ Then, select the issue template titled **Peer review**, and answer the following
 -   Provide constructive feedback on any issues with file and/or code organization.
 -   (Optional) Any further comments or feedback?
 
-4.  Add links to the two issues you opened as part of your peer review. You don't need to copy and paste the contents of the issues, just the links.
+3.  Add links to the two issues you opened as part of your peer review. You don't need to copy and paste the contents of the issues, just the links.
+
+```{marginfigure}
+__IMPORTANT: How do we mark assignments?__
+
+Your teaching team will mark your work using your __knitted file__ (ending in .md) and not your R Markdown (.Rmd) file that you use to create and run your code. This is because your knitted file is a completely _reproducible_ document where we can see your code and its output without having to run any code ourselves. It is important you knit your work while working on your assessments as we will only mark what is in the knitted file and not what is in the .Rmd file. For this HW we will also assess the __issues__ you posted on other teams repos (navigating to them via links provided in answer to question 4).
+```
+
+🧶 ✅ ⬆️ *Now is a good time to knit your document, commit, and then push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards. Make sure that your last push to the repo comes before the deadline, **25 November, 16:00 UK time**. You can confirm that what you committed and pushed are indeed in your repo that we will see by visiting your repo on GitHub. Make sure your Rmd and md files are there and that your md file contains all of your code and plots!*
+
+## Getting help
+
+If you have any questions about the assignment, please post them on Piazza and/or stop by student hours!

@@ -187,7 +187,7 @@ knitr::include_graphics("img/plot-to-recreate.png")
 ```{marginfigure}
 __IMPORTANT: How do we mark assignments?__
 
-Your teaching team will mark your work using your __knitted file__ (ending in .html or .md) and not your R Markdown (.Rmd) file that you use to create and run your code. This is because your knitted file is a completely _reproducible_ document where we can see your code and its output without having to run any code ourselves. It is important you knit your work while working on your assessments as we will only mark what is in the knitted file and not what is in the .Rmd file.
+Your teaching team will mark your work using your __knitted file__ (ending in .md) and not your R Markdown (.Rmd) file that you use to create and run your code. This is because your knitted file is a completely _reproducible_ document where we can see your code and its output without having to run any code ourselves. It is important you knit your work while working on your assessments as we will only mark what is in the knitted file and not what is in the .Rmd file.
 ```
 
 ✏️️🧶 ✅ ⬆️ *After writing your answer in your R Markdown document under the appropriate exercise, make sure to knit, commit, and push your changes to GitHub with an appropriate commit message. Make sure you have committed and pushed all changed files so that your Git pane is cleared up afterwards. Your last push to the repo needs to come before the deadline, **14 October, 16:00 UK time**. You can confirm that what you committed and pushed are indeed in your repo that we will see by visiting your repo on GitHub. Make sure your Rmd and md files are there and that your md file contains all of your code and plots!*
