@@ -69,6 +69,7 @@ The goal is for you to read and understand the package documentation to carry ou
 
 ## Packages on CRAN
 
+Below are some examples of packages you could use.
 These packages can be installed with:
 
 ```{r eval=FALSE}
@@ -126,8 +127,6 @@ For example, for the first package listed below, `USERNAME` is `hadley` and `PAC
 | [lego](https://github.com/seankross/lego)                  | This R data package contains information about every Lego set manufactured from 1970 to 2015, a total of 6172 sets                                       |
 | [linkinpark](https://github.com/delabj/linkinpark)         | Data package that contains a few different datasets about the band                                                                                       |
 | [prenoms](https://github.com/ThinkR-open/prenoms)          | First names given to babies in metropolitan France between 1900 and 2015                                                                                 |
-| [raybonsai](http://www.raybonsai.com/)                     | Generate 3D procedural trees in R, rendered with rayrender! Procedural generation code based on the flametree package by Danielle Navarro.               |
-|                                                            |                                                                                                                                                          |
 
 # Part 3 - Peer review
 
@@ -162,3 +161,4 @@ Your teaching team will mark your work using your __knitted file__ (ending in .m
 ## Getting help
 
 If you have any questions about the assignment, please post them on Piazza and/or stop by student hours!
+
