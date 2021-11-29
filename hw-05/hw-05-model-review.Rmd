@@ -149,7 +149,7 @@ Answers to this question are stored in the `harass5` variable in our dataset.
 In this part you're asked to review **three** project presentations we didn't get to watch during the presentations on Friday.
 To complete this part:
 
--   Find the list of presentations [here](https://example.com/)
+-   Find the list of presentations [here](https://example.com/) (this link won't work until 06/12/21!)
 
 ```{marginfigure}
 __Note:__ You obviously cannot submit reviews for your own team (I have checks for this!).
