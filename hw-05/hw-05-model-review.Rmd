@@ -1,5 +1,5 @@
 ---
-title: "HW 5 - Model and review"
+title: "HW 05 - Model and review"
 subtitle: "Due: 9 December, 16:00 UK time"
 output: 
   tufte::tufte_html:
@@ -80,7 +80,7 @@ We'll create one more recipe later, that's why we're naming this recipe `_1`.
 5.  Create a recipe with the following steps for predicting `advfront` from `polviews`, `wrkstat`, and `educ`.
     Name this recipe `gss16_rec_1`.
 
-    -   `step_other()` to pool values that occur less than 10% of the time (`threshold = 0.10`) in the `wrkstat` variable into `"Other"`.
+    -   `step_other()` to pool values that occur less than 10% of the time in the `wrkstat` variable into `"Other"`.
 
     -   `step_dummy()` to create dummy variables for `all_nominal()` variables that are predictors, i.e. `all_predictors()`
 
@@ -120,7 +120,7 @@ We'll create one more recipe later, that's why we're naming this recipe `_1`.
 __Note:__ If you haven't yet done so, you'll need to first train your workflows on the training data, and then use these fit objects to calculate predictions for the test data.
 ```
 
-11. Use the models to predict the test data, plot the ROC curves for the predictions for both models, and calculate the areas under the ROC curve. Does your answer to the previous exercise hold for the testing data as well? Explain your reasoning.
+11. Use the models to predict the test data, calculate the accuracy, plot the ROC curves for the predictions for both models, and calculate the areas under the ROC curve. Does your answer to the previous exercise hold for the testing data as well? Explain your reasoning.
 
 ## Harassment at work
 
@@ -144,18 +144,23 @@ Answers to this question are stored in the `harass5` variable in our dataset.
 
 # Part 2 - Project peer review
 
-In this part you're asked to review three project presentations we didn't get to watch during the presentations on Friday.
+[Available from 06/12/21]
+
+In this part you're asked to review **three** project presentations we didn't get to watch during the presentations on Friday.
 To complete this part:
 
 -   Find the list of presentations [here](https://example.com/)
--   Select three projects (other than your own, obviously!) from your own tutorial group (tutorial 1, 2, or 3)
--   Submit reviews for the projects on the peer review form [here](https://example.com/) (just like you did during the session on Friday)
--   And finally complete the following exercise
 
-16. Write a paragraph that very briefly describes each project (1-2 sentences each), highlights what you liked in each project and what you think can be improved, and finally comment on how you could improve your own project (analysis, presentation, or any other aspect) based on strengths of these three projects, if you had extra time to do so.
+```{marginfigure}
+__Note:__ You obviously cannot submit reviews for your own team (I have checks for this!).
+```
+
+16. Submit reviews for the projects using the peer review form [here](https://forms.office.com/r/qxCN5p5AEx).
+    This is the same form used during the session on Friday.
+
+17. Write a paragraph that very briefly describes each project (1-2 sentences each), highlights what you liked in each project and what you think can be improved, and finally comment on how you could improve your own project (analysis, presentation, or any other aspect) based on strengths of these three projects, if you had extra time to do so.
 
 [^1]: Smith, Tom W, Peter Marsden, Michael Hout, and Jibum Kim.
     General Social Surveys, 1972-2016 [machine-readable data file] /Principal Investigator, Tom W. Smith; Co-Principal Investigator, Peter V. Marsden; Co-Principal Investigator, Michael Hout; Sponsored by National Science Foundation.
     -NORC ed.- Chicago: NORC at the University of Chicago [producer and distributor].
     Data accessed from the GSS Data Explorer website at gssdataexplorer.norc.org.
-
