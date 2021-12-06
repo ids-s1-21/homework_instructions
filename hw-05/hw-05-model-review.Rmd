@@ -82,7 +82,12 @@ We'll create one more recipe later, that's why we're naming this recipe `_1`.
 
     -   `step_other()` to pool values that occur less than 10% of the time in the `wrkstat` variable into `"Other"`.
 
-    -   `step_dummy()` to create dummy variables for `all_nominal()` variables that are predictors, i.e. `all_predictors()`
+    -   `step_dummy()` to create dummy variables for `all_nominal()` variables that are predictors, i.e. not "outcomes".
+        You can select outcomes using `all_outcomes()`
+
+```{marginfigure}
+You can de-select things using the minus sign, just as you can when using `select`, and in this case it's fine to combine positive and negative selections.  You can see how Mine does it in one of the videos, or have a look at Piazza @770 if you get stuck!
+```
 
 6.  Specify a logistic regression model using `"glm"` as the engine.
     Name this specification `gss16_spec`.
