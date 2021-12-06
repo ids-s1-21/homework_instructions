@@ -149,16 +149,16 @@ Answers to this question are stored in the `harass5` variable in our dataset.
 In this part you're asked to review **three** project presentations we didn't get to watch during the presentations on Friday.
 To complete this part:
 
--   Find the list of presentations [here](https://example.com/) (this link won't work until 06/12/21!)
+-   Find the list of presentations [here](https://uoe-my.sharepoint.com/:x:/g/personal/delliot2_ed_ac_uk/EZA2AWt62e5Jog2t1uMAgVoBSuyw0iuBdGw4vFipHx3utw?e=Tm7ccr) (this link now works)
 
 ```{marginfigure}
 __Note:__ You obviously cannot submit reviews for your own team (I have checks for this!).
 ```
 
-16. Submit reviews for the projects using the peer review form [here](https://forms.office.com/r/qxCN5p5AEx).
+16. Submit reviews for **three** projects from teams at the same workshop time as you using the peer review form [here](https://forms.office.com/r/qxCN5p5AEx).
     This is the same form used during the session on Friday.
 
-17. Write a paragraph that very briefly describes each project (1-2 sentences each), highlights what you liked in each project and what you think can be improved, and finally comment on how you could improve your own project (analysis, presentation, or any other aspect) based on strengths of these three projects, if you had extra time to do so.
+17. Write a paragraph that very briefly describes each of the three projects (1-2 sentences each), highlights what you liked in each project and what you think can be improved, and finally comment on how you could improve your own project (analysis, presentation, or any other aspect) based on strengths of these three projects, if you had extra time to do so.
 
 [^1]: Smith, Tom W, Peter Marsden, Michael Hout, and Jibum Kim.
     General Social Surveys, 1972-2016 [machine-readable data file] /Principal Investigator, Tom W. Smith; Co-Principal Investigator, Peter V. Marsden; Co-Principal Investigator, Michael Hout; Sponsored by National Science Foundation.
